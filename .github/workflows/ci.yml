@@ -151,7 +151,7 @@ jobs:
           # テスト環境未整備のため
 
       - name: Keep screenshots from failed system tests
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: screenshots
