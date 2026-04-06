@@ -1,0 +1,37 @@
+@startuml
+title ゲームの用語辞典サイト
+
+entity User {
+  + user_id : string
+  --
+  password_digest : string
+  articles
+}
+
+entity Article {
+  + article_id : int
+  --
+  title : string
+  subtitle : string
+  description : string
+  created_by : string
+  created_at : date
+  updated_at : date
+  comments
+}
+
+entity Comment {
+  + comment_id : int
+  --
+  user_name
+  description
+  article_id
+}
+
+
+
+User ||--o{ Article
+Article ||--o{ Comment
+User ||--o{ Comment
+
+@enduml
