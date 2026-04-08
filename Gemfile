@@ -61,6 +61,7 @@ group :development, :test do
 
   gem "rspec", "~> 3.13"
   gem "rspec-rails", "~> 8.0"
+  gem "factory_bot_rails", "~> 6.5"
 end
 
 group :development do
