@@ -13,6 +13,7 @@ ja:
       article:
         id: id
         title: タイトル
+        category: カテゴリ
         description:  記事内容
   date:
     abbr_day_names:
