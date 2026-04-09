@@ -13,9 +13,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to articles_url, notice: "「#{article.title}」を登録しました"
+      redirect_to articles_url, notice: "「#{@article.title}」を登録しました"
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
