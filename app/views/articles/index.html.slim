@@ -8,10 +8,12 @@ table.table.table-hover
     tr
       th style="width: 20%" = Article.human_attribute_name(:title)
       th style="width: 20%" = Article.human_attribute_name(:category)
-      th style="width: 60%" = Article.human_attribute_name(:description)
+      th style="width: 50%" = Article.human_attribute_name(:description)
   tbody
     - @articles.each do |article|
       tr
         td= article.title
         td= article.category
         td= article.description
+        td
+          =link_to '編集', edit_article_path(article), class: 'btn btn-primary mr-3'
