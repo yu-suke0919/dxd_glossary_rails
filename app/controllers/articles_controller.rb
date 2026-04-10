@@ -24,8 +24,11 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article.update!(article_params)
-    redirect_to articles_url, notice: "#{@article.title}を更新しました"
+    if @article.update(article_params)
+      redirect_to articles_url, notice: "「#{@article.title}」を登録しました"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
