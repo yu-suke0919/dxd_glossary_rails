@@ -1,4 +1,4 @@
-h1 Articles#index
+h1 記事一覧
 
 = link_to '新規作成', new_article_path, class: 'btn btn-primary'
 
@@ -14,7 +14,7 @@ table.table.table-hover
   tbody
     - @articles.each do |article|
       tr
-        td= article.title
+        td= link_to article.title, article
         td= article.category
         td= article.description
         td= link_to '編集', edit_article_path(article), class: 'btn btn-primary mr-3'
