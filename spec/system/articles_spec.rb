@@ -13,7 +13,7 @@ describe '記事表示機能', type: :system do
       end
       it '記事が表示される' do
         # 記事が画面上に表示されていることを確認
-        expect(page).to have_content 'taitore'
+        expect(page).to have_content 'taitoru'
       end
     end
   end
