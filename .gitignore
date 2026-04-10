@@ -70,7 +70,6 @@ yarn-debug.log*
 
 #追加
 config/database.yml
-config/cable.yml
 config/credentials/production.key
 /app/assets/builds/*
 !/app/assets/builds/.keep
