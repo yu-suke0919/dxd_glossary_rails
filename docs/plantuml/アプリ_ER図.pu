@@ -4,6 +4,7 @@ title ゲームの用語辞典サイト
 entity User {
   + user_id : string
   --
+  name : string
   email : string
   password_digest : string
 
@@ -29,9 +30,11 @@ entity Article {
 entity Comment {
   + comment_id : int
   --
-  user_id : string
   description : text
-  article_id
+  created_at : date
+
+  belong_to user
+  belong_to article
 }
 
 
