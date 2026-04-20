@@ -4,6 +4,7 @@ title ゲームの用語辞典サイト
 entity User {
   + user_id : string
   --
+  name : string
   email : string
   password_digest : string
 
