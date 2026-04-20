@@ -18,3 +18,19 @@ table.table.table-hover
     tr
       th= Article.human_attribute_name(:updated_at)
       td= @article.updated_at
+
+
+
+
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th style="width: 10%" = Article.human_attribute_name(:ID)
+      th style="width: 90%" = Article.human_attribute_name(:comment_body)
+  tbody
+    - @article.comments.each do |comment|
+      tr
+        td= comment.id
+        td= comment.body
