@@ -30,9 +30,11 @@ entity Article {
 entity Comment {
   + comment_id : int
   --
-  user_id : string
   description : text
-  article_id
+  created_at : date
+
+  belong_to user
+  belong_to article
 }
 
 
