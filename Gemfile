@@ -28,6 +28,7 @@ gem "slim-rails"
 gem "html2slim", github: "slim-template/html2slim"
 gem "bootstrap"
 gem "dartsass-rails"
+gem "ransack"
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
