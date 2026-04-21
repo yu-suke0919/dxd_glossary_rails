@@ -1,9 +1,8 @@
 class CommentsController < ApplicationController
   def create
       @article = Article.find(params[:article_id])
-      @comment = @article.comments.new(comment_params)
-      @comment.comment_number = 4
-      if @comment.save
+      @comment = Comments::CreateService.new.call(article: @article, params: comment_params)
+      if @comment.persisted?
         redirect_to article_url(@article), notice: "コメントを投稿しました"
       end
   end
