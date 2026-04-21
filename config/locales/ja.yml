@@ -9,12 +9,18 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
     models:
       article: 記事
+      commnet: コメント
     attributes:
+      user:
+        name: 名前
       article:
         id: id
         title: タイトル
         category: カテゴリ
         description:  記事内容
+      comment:
+        comment_number: 投稿番号
+        body: コメント
   date:
     abbr_day_names:
     - 日
