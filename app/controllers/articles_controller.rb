@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [ :show, :edit, :update, :destroy ]
   skip_before_action :login_required, only: [ :index, :show ]
   def index
-    @articles = Article.all
+    @q = Article.ransack(params[:q])
+    @articles = @q.result(distinct: true).recent
   end
 
   def show
