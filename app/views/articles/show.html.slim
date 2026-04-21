@@ -34,3 +34,9 @@ table.table.table-hover
       tr
         td= comment.id
         td= comment.body
+
+= form_with model: [@article,@comment], local: true do |f|
+  .form-group
+    = f.label :body
+    = f.text_field :body, class: 'form-control', id:'comment_body'
+  = f.submit nil, class: 'btn btn-primary'
