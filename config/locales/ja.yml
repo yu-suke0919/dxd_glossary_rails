@@ -18,6 +18,7 @@ ja:
         title: タイトル
         category: カテゴリ
         description:  記事内容
+        updated_at:  更新日時
       comment:
         comment_number: 投稿番号
         body: コメント

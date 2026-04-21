@@ -13,7 +13,7 @@ table.table.table-hover
       th= Article.human_attribute_name(:description)
       td= simple_format(h(@article.description),(),sanitize: false,wrapping_tag: "div")
     tr
-      th= Article.human_attribute_name(:name)
+      th= User.human_attribute_name(:name)
       td= @article.user.name
     tr
       th= Article.human_attribute_name(:updated_at)
