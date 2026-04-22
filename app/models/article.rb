@@ -4,7 +4,7 @@ class Article < ApplicationRecord
   validates :description, presence: true
 
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   scope :recent, -> { order(created_at: :desc) }
   def self.ransackable_attributes(auth_object = nil)
