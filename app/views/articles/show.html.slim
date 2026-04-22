@@ -1,6 +1,4 @@
 h1 #{@article.title}
-.nav.justify-content-end
-  = link_to '一覧', articles_path, class: 'nav-link'
 table.table.table-hover
   tbody
     tr
@@ -11,7 +9,9 @@ table.table.table-hover
       td= @article.category
     tr
       th= Article.human_attribute_name(:description)
-      td= simple_format(h(@article.description),(),sanitize: false,wrapping_tag: "div")
+      td
+        .description-box
+          = simple_format(h(@article.description), {}, sanitize: false, wrapper_tag: "div")
     tr
       th= User.human_attribute_name(:name)
       td= @article.user.name
