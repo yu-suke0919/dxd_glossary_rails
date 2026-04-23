@@ -1,24 +1,40 @@
-# README
+# dxd-glossary_rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ゲームの攻略記事投稿サイトです。
+ユーザー登録機能や記事のCRUD機能に加えて、各記事にコメントを投稿できます。
 
-Things you may want to cover:
+DragxDrive(=dxd)というゲームに向けて作成しましたが、リポジトリにはゲームのコンテキストは含まれていないため、他のゲーム用のサイトとしても流用可能です。
 
-* Ruby version
+## URL
+準備中
+ログインしなくても記事を確認することができます。
 
-* System dependencies
+## 作成背景
+・Ruby学習のため
 
-* Configuration
+・そのゲームのコミュニティにおいて、攻略情報やノウハウが蓄積されているものの、情報の公開場所がユーザーごとに色々なSNSに散らばっており、情報にアクセスしづらいという課題があった。
+情報を見つけやすくするためのポータルサイト及び記事を投稿するサイトが必要であると感じ、作成しました。
 
-* Database creation
+## 機能一覧
+- ユーザー登録、ログイン機能(bcrypt,deviceなし)
+- 記事投稿機能
+  - 記事CRUD
+  - 記事に対するコメント機能
+- 記事検索機能(ransack)
 
-* Database initialization
+![docs内の画面遷移図](docs/plantuml/アプリ_画面遷移図.png)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## テスト
+- RSpec
+  - 単体テスト(model)
 
-* Deployment instructions
+## 使用技術
+- Ruby 4.0.1
+- Ruby on Rails 8.1.3
+  - bootstrap 5.3.8
+  - RSpec 3.13.2
+- PostgreSQL 18.3
 
-* ...
+## データベース設計
+![docs内のER図](docs/plantuml/アプリ_ER図.png)
