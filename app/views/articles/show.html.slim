@@ -36,9 +36,9 @@ table.table.table-hover
         td= comment.comment_number
         td= comment.body
         td= comment.user&.name || "削除されたユーザー"
-
-= form_with model: [@article,@comment], local: true do |f|
-  .form-group
-    = f.label :body
-    = f.text_field :body, class: 'form-control', id:'comment_body'
-  = f.submit nil, class: 'btn btn-primary'
+- if @user.present?
+  = form_with model: [@article,@comment], local: true do |f|
+    .form-group
+      = f.label :body, "#{@user.name}の#{Comment.human_attribute_name(:body)}"
+      = f.text_field :body, class: 'form-control', id:'comment_body'
+    = f.submit nil, class: 'btn btn-primary'

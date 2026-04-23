@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
   def show
     @comment = Comment.new
+    @user = current_user
   end
 
   def new
