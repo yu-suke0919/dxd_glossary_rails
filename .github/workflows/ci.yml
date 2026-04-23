@@ -106,6 +106,7 @@ jobs:
           bin/rails db:create
           bin/rails db:schema:load
           bundle exec rspec
+        # bin/rails testを削除、minitestではなくrspecを使うため
 
   system-test:
     runs-on: ubuntu-latest
