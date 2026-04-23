@@ -1,7 +1,7 @@
 module Comments
   class CreateService
-    def call(article:, params:)
-      comment = article.comments.new(params)
+    def call(article:, user:, params:)
+      comment = article.comments.new(params.merge(user: user))
       return comment unless comment.valid?
       article.with_lock do
         ApplicationRecord.transaction do
