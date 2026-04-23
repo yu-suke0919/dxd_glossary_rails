@@ -1,10 +1,15 @@
-# README
+# dxd-glossary_rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ゲームの攻略記事投稿サイトです。
+記事のCRUD機能に加えて、各記事にコメントを投稿できます。
 
-Things you may want to cover:
+# URL
+準備中
+ログインしなくても記事を確認することができます。
 
+# 作成背景
+・Ruby学習のため
+・そのゲームのコミュニティにおいて、攻略情報やノウハウが蓄積されているものの、情報の公開場所が色々なSNSに散らばっており、情報を探している人が見つけやすくするためのポータルサイトが必要であると感じていた。
 * Ruby version
 
 * System dependencies
