@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-
+  has_many :comments, dependent: :nullify
   has_many :articles
   validates :name, presence: true, length: { maximum: 10 }
   validates :email, presence: true
