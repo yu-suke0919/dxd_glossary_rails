@@ -35,7 +35,7 @@ table.table.table-hover
       tr
         td= comment.comment_number
         td= comment.body
-        td= comment.user.name
+        td= comment.user&.name || "削除されたユーザー"
 
 = form_with model: [@article,@comment], local: true do |f|
   .form-group
