@@ -28,12 +28,14 @@ table.table.table-hover
   thead.thead-default
     tr
       th style="width: 10%" = Comment.human_attribute_name(:comment_number)
-      th style="width: 90%" = Comment.human_attribute_name(:body)
+      th style="width: 80%" = Comment.human_attribute_name(:body)
+      th style="width: 10%" = User.human_attribute_name(:name)
   tbody
     - @article.comments.each do |comment|
       tr
         td= comment.comment_number
         td= comment.body
+        td= comment.user.name
 
 = form_with model: [@article,@comment], local: true do |f|
   .form-group
