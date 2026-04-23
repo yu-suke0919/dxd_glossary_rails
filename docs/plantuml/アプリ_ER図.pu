@@ -2,7 +2,7 @@
 title ゲームの用語辞典サイト
 
 entity User {
-  + user_id : string
+  + user_id : int
   --
   name : string
   email : string
@@ -10,28 +10,25 @@ entity User {
 
   has_secure_password
   has_many :article
-  has_many :comment
 }
 
 entity Article {
   + article_id : int
   --
-  category : string
   title : string
-  subtitle : string
+  category : string
   description : text
-
-  created_by : string
-  created_at : date
   updated_at : date
+
+  belong_to user
   has_many : comment
 }
 
 entity Comment {
   + comment_id : int
   --
-  description : text
-  created_at : date
+  comment_number : int
+  body : text
 
   belong_to user
   belong_to article
