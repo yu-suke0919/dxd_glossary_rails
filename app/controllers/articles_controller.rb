@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [ :show, :edit, :update, :destroy ]
+  before_action :current_user, only: [ :show ]
   skip_before_action :login_required, only: [ :index, :show ]
   def index
     @q = Article.ransack(params[:q])
@@ -8,7 +9,6 @@ class ArticlesController < ApplicationController
 
   def show
     @comment = Comment.new
-    @user = current_user
   end
 
   def new
