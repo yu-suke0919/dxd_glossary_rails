@@ -30,7 +30,7 @@ gem "bootstrap"
 gem "dartsass-rails"
 gem "ransack"
 gem "kaminari"
-
+gem "bootstrap5-kaminari-views", "~> 0.0.1"
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
 gem "solid_queue"
