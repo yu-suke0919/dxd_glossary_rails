@@ -14,7 +14,7 @@
             = f.search_field :title_cont, class: 'form-control'
             = f.submit '検索', class: 'btn btn-outline-primary'
 
-.mb-3.text-center
+.my-3.text-center
   = paginate @articles, theme: 'bootstrap-5',pagination_class: 'pagination justify-content-center'
   = page_entries_info @articles
 
@@ -30,3 +30,6 @@ table.table.table-hover
         td= link_to article.title, article
         td= article.category
         td= article.description
+
+.mt-3
+  = paginate @articles, theme: 'bootstrap-5',pagination_class: 'pagination justify-content-center'
