@@ -1,8 +1,6 @@
 # dxd-glossary_rails
 dxd           = DragxDriveというゲーム
-
 glossary      = 用語集
-
 dxd-glossary  = ゲームの用語集
 
 
