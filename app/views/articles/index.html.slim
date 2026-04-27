@@ -13,6 +13,9 @@
             = f.submit '検索', class: 'btn btn-outline-primary'
 
 .mb-3
+  = paginate @articles
+  = page_entries_info @articles
+  
 table.table.table-hover
   thead.thead-default
     tr
