@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   skip_before_action :login_required, only: [ :index, :show ]
   def index
     @q = Article.ransack(params[:q])
-    @articles = @q.result(distinct: true).recent
+    @articles = @q.result(distinct: true).recent.page(params[:page]).per(5)
   end
 
   def show
