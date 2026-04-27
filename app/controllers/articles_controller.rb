@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to articles_url, notice: "「#{@article.title}」を登録しました"
+      redirect_to user_path(current_user), notice: "「#{@article.title}」を登録しました"
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to articles_url, notice: "#{@article.title}を削除しました"
+    redirect_to user_path(current_user), notice: "#{@article.title}を削除しました"
   end
 
   private
