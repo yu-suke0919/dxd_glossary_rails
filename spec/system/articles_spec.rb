@@ -91,7 +91,7 @@ describe '記事CRUD機能', type: :system do
         expect(page).to have_current_path(edit_article_path(article_a))
         fill_in 'タイトル', with: 'FILTERED'
         click_button '更新する'
-        expect(page).to have_current_path(articles_path)
+        expect(page).to have_current_path(user_path(user_a))
         expect(page).to have_css('.alert-success', text: '「FILTERED」を登録しました')
       end
     end
@@ -109,14 +109,14 @@ describe '記事CRUD機能', type: :system do
         expect(page).to have_current_path('/')
         expect(page).to have_css('.alert-success', text: 'ログインしました')
       end
-      it '記事編集画面に遷移し、更新に成功する' do
+      it '記事削除画面に遷移し、削除に成功する' do
         click_link user_a.name
         within('tr', text: 'taitoru') do
           accept_confirm do
             click_link '削除'
           end
         end
-        expect(page).to have_current_path(articles_path)
+        expect(page).to have_current_path(user_path(user_a))
         expect(page).to have_css('.alert-success', text: 'taitoruを削除しました')
       end
     end
