@@ -1,8 +1,7 @@
 # dxd-glossary_rails
-dxd           = DragxDriveというゲーム
-glossary      = 用語集
-dxd-glossary  = ゲームの用語集
-
+dxd           = DragxDriveというゲーム<br>
+glossary      = 用語集<br>
+dxd-glossary  = ゲームの用語集<br>
 
 ゲームの用語(攻略記事)投稿サイトです。
 
